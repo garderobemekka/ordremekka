@@ -1,7 +1,6 @@
 <?php
 session_start();
-function db_connect() {
-    static $connection;
+
 	$username	= "ordremeekka";   
 	$password	= "Gme1234567890987654321";
 	$dbname		= "gme";
@@ -11,7 +10,7 @@ function db_connect() {
     mysqli_real_connect($connection, $host, $username, $password, $dbname, 3306, MYSQLI_CLIENT_SSL);
 	
 if ($connection->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+  die("Connection failed: " . $connection->connect_error);
 }
 echo "Connected successfully";
 	
@@ -45,7 +44,7 @@ echo "Connected successfully";
 //     $_SESSION['token_time'] = time();
 // }else{
 //     $token = $_SESSION['token'];
-}
+
 
 // define('ADMINEMAIL', 'mads@garderobemekka.no');
 
