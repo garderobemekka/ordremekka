@@ -1,18 +1,18 @@
 <?php
-error_reporting(0);
-@session_start();
-set_time_limit(0);
-
+session_start();
 function db_connect() {
     static $connection;
-	$username	= "root";   
-	$password	= "";
+	$username	= "ordremeekka";   
+	$password	= "Gme1234567890987654321";
 	$dbname		= "gme";
-	$host		= "localhost";
+	$host		= "ordremekka.mysql.database.azure.com";
+    $connection = mysqli_init();
+    mysqli_ssl_set($connection,NULL,NULL, "https://ordremekka.azurewebsites.net/assets/DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+    
 
     if(!isset($connection)) { 
-        $connection = mysqli_connect($host,$username,$password,$dbname);
-    }
+        
+        mysqli_real_connect($connection, $host, $username, $password, $dbname, 3306, MYSQLI_CLIENT_SSL);
     if($connection === false) {
         return mysqli_connect_error(); 
     }
