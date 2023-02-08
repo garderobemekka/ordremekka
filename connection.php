@@ -41,7 +41,6 @@ function db_connect() {
 // }else{
 //     $token = $_SESSION['token'];
 
-
-// define('ADMINEMAIL', 'mads@garderobemekka.no');
+ define('ADMINEMAIL', 'mads@garderobemekka.no');
 
 ?>
