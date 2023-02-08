@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 	$username	= "ordremeekka";   
 	$password	= "Gme1234567890987654321";
