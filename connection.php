@@ -45,7 +45,7 @@ echo "Connected successfully";
 //     $_SESSION['token_time'] = time();
 // }else{
 //     $token = $_SESSION['token'];
-// }
+}
 
 // define('ADMINEMAIL', 'mads@garderobemekka.no');
 
