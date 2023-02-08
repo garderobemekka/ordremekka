@@ -32,9 +32,9 @@ if ($csrf == $_SESSION["token"]) {
 	
 }
 
-// /* print message */
-// $msg = $connect->real_escape_string($_GET["error"]);
-// if($msg == 1){ $strmsg = "Invalid Username or Password"; }
+/* print message */
+$msg = $connect->real_escape_string($_GET["error"]);
+if($msg == 1){ $strmsg = "Invalid Username or Password"; }
 
 
 ?>
